@@ -1,0 +1,33 @@
+87732 arriving in lane 1.
+25735 arriving in lane 1.
+40470 arriving in lane 1.
+90637 arriving in lane 1.
+65038 arriving in lane 1.
+27110 arriving in lane 1.
+58116 arriving in lane 1.
+24732 arriving in lane 1.
+31795 arriving in lane 1.
+71499 arriving in lane 1.
+72336 arriving in lane 2.
+47867 arriving in lane 2.
+50540 arriving in lane 2.
+28166 arriving in lane 2.
+84370 arriving in lane 2.
+63423 arriving in lane 2.
+72000 arriving in lane 2.
+05898 arriving in lane 2.
+72411 arriving in lane 2.
+64771 arriving in lane 2.
+31415 being turned away. No room in lanes.
+64771 departing from lane 2.
+	Moved 0 times.
+72411 departing from lane 2.
+	Moved 0 times.
+27110 departing from lane 1.
+	Moved 0 times.
+50540 departing from lane 2.
+	Moved 0 times.
+84370 departing from lane 2.
+	Moved 1 times.
+72336 departing from lane 2.
+	Moved 0 times.
