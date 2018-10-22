@@ -1,0 +1,554 @@
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 3
+No. Spaces Available: 2
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Enter an option from the list.
+> d
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 3
+No. Spaces Available: 2
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Sequence = [3, 5, 9]
+> a
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 3
+No. Spaces Available: 2
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 3
+No. Spaces Available: 2
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Enter value of element to add to sequence. 
+> 23
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 4
+No. Spaces Available: 1
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Done.
+> d
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 4
+No. Spaces Available: 1
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Sequence = [3, 5, 9, 23]
+> o
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 4
+No. Spaces Available: 1
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Enter position of element to overwrite. 
+> 3
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 4
+No. Spaces Available: 1
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Enter value of new element to write to position 3. 
+> 314
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 4
+No. Spaces Available: 1
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Done.
+> d
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 4
+No. Spaces Available: 1
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Sequence = [3, 5, 314, 23]
+> a
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 4
+No. Spaces Available: 1
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 4
+No. Spaces Available: 1
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Enter value of element to add to sequence. 
+> 10
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: TRUE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 5
+No. Spaces Available: 0
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Done.
+> a
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: TRUE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 5
+No. Spaces Available: 0
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: TRUE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 5
+No. Spaces Used: 5
+No. Spaces Available: 0
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Enter value of element to add to sequence. 
+> 2718
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 10
+No. Spaces Used: 6
+No. Spaces Available: 4
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Done.
+> d
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 10
+No. Spaces Used: 6
+No. Spaces Available: 4
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+Sequence = [3, 5, 314, 23, 10, 2718]
+> q
+
+----------[ CLEAR SCREEN ]----------
+
+Integer Sequence Testing Program
+================================
+
+Sequence Status:
+================
+
+Summary:
+========
+Full Sequence: FALSE
+Empty Sequence: FALSE
+
+Details:
+========
+Capacity: 10
+No. Spaces Used: 6
+No. Spaces Available: 4
+
+Options:
+========
+d - display sequence contents
+p - get position of element
+o - overwrite element
+a - add element
+g - get element
+q - quit
+
+
+----------[ CLEAR SCREEN ]----------
+
+Goodbye.
