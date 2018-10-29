@@ -1,0 +1,1 @@
+Write a program to read IP addresses from a file and produce a list of distinct addresses and a count of how many times each address appeared in the file. The addresses and counts are stored in a linked list. Your linked list should hold objects of type AddressItem. You should use the templated version of the linked list class we reviewed in lecture.
