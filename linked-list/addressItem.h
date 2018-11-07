@@ -48,4 +48,8 @@ istream & operator>>(istream & in, AddressItem & a)
     return in;
 }
 
-//ostream & operator<<(ostream & out, const AddressItem & a);
+ostream & operator<<(ostream & out, const AddressItem & a)
+{
+    out << a.address << " : " << a.count << endl;
+    return out;
+}
