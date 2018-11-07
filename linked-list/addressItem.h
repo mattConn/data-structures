@@ -22,10 +22,30 @@ private:
 
 };
 
+// member definitions
+//===================
+
+// Tally
+void AddressItem::Tally(){count++;};
+
+//getCount
+int AddressItem::getCount() const {return count;};
+
+// getAddress
+string AddressItem::getAddress() const {return address;};
+
+bool AddressItem::operator==(const AddressItem & addr2) const
+{
+    return address == addr2.address;
+}
 
 // friend definitions
+//===================
+
 istream & operator>>(istream & in, AddressItem & a)
 {
     in >> a.address;
     return in;
 }
+
+//ostream & operator<<(ostream & out, const AddressItem & a);
