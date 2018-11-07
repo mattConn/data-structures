@@ -1,9 +1,14 @@
 #include <iostream>
+#include "addressItem.h"
 
 using namespace std;
 
+void copyLines();
+
 int main()
 {
-    cout << "Hello World!" << endl;
+    AddressItem a;
+
+    cin >> a;
     return 0;
 }
