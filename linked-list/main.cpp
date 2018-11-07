@@ -50,7 +50,7 @@ int main()
     }
 
     // list header for display
-    string printHeader = "IP Address : Occurences"; // string obj. for length
+    string printHeader = "IP Address : Occurrences"; // string obj. for length
     cout << printHeader << endl;
     cout << string(printHeader.length(),'=') << endl; // using string length here
 
