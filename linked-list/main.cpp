@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include "addressItem.h"
 #include "LinkedList.h"
 
@@ -20,7 +21,8 @@ int main()
         inFile >> a;
         a.Tally();
 
-        bool dup = false;
+        bool dup = false; // flag for duplicate entries
+
         // search for duplicate in list
         if(list.getLength() != 0)
         {
@@ -46,10 +48,12 @@ int main()
     }
 
     // print list
+    string printHeader = "IP Address : Occurences";
+    cout << printHeader << endl;
+    cout << string(printHeader.length(),'=') << endl;
+
     for(int i = 1; i < list.getLength(); i++)
-    {
         cout << list.getEntry(i);
-    }
 
     inFile.close();
 
