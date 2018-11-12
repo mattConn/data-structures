@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "array-list/ArrayList.h"
+
+#define DEFAULT_CAPACITY 15
 
 using namespace std;
 
@@ -17,17 +20,9 @@ int main()
 	ArrayList<int> list;
 
 	printList(list);
-	cout << string(10,'=') << endl;
-	
-	list.insert(list.getLength()+1, 13);
-	
+	fileToList("data.txt", list);
 	printList(list);
-	cout << string(10,'=') << endl;
-
-	list.insert(list.getLength()+1, 74);
 	
-	printList(list);
-	cout << string(10,'=') << endl;
 
 	
 	
@@ -37,6 +32,23 @@ int main()
 template<class T>
 void fileToList(const string &fileName, ArrayList<T> &list)
 {
+	fstream inFile;
+	inFile.open(fileName);
+
+	T tmp;
+	int insertionCount = 0;
+	while(inFile >> tmp)
+	{
+		if(!list.insert(list.getLength()+1, tmp))
+		{
+			cout << "fileToList: Max capacity reached at " << insertionCount << " insertion(s)." << endl;
+			break;
+		}
+
+		insertionCount++;
+	}
+
+	inFile.close();
 }
 
 template<class T>
