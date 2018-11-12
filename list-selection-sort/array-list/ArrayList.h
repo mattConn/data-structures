@@ -9,7 +9,14 @@
 #define ARRAY_LIST_
 
 #include "ListInterface.h"
-#include "PrecondViolatedExcep.h"
+
+/*
+Modified from "#include "PrecondViolatedExcep.h":
+header did not include driver; compiler could not
+see constructor definition.
+*/
+
+#include "PrecondViolatedExcep.cpp"
 
 template<class ItemType>
 class ArrayList : public ListInterface<ItemType>
