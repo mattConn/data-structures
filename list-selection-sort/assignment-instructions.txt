@@ -1,0 +1,9 @@
+This assignment will utilize the 2 different List class implementations we have studied that utilize exception handling. The goal of the lab is to demonstrate "good modular  programming style".You will implement a selection sort using several different List class implementations.
+
+http://www.cs.armstrong.edu/liang/animation/web/SelectionSort.html
+
+Part A: Using the array based List class, write a function that is passed a List object as a parameter, that will sort the list using a selection sort. Put the code for your function in your driver file. Display the contents of the list before and after sorting using a print function that is also added to your driver code.Create your initial list by reading from a data file. This task could also be implemented in a function.
+
+Part B: Modify your code to utilize linked implementation of the List class.
+
+Utilize try and catch blocks in both parts whenever the possibility of an exception being thrown exists.
