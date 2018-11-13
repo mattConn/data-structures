@@ -50,11 +50,11 @@ void fileToList(const string &fileName, ArrayList<T> &list, const bool &verbose)
 	fstream inFile;
 	inFile.open(fileName);
 
-	T tmp;
+	T smallest;
 	int insertionCount = 0;
-	while(inFile >> tmp)
+	while(inFile >> smallest)
 	{
-		if(!list.insert(list.getLength()+1, tmp))
+		if(!list.insert(list.getLength()+1, smallest))
 		{
 			if(verbose) // check verbose flag
 				cout << "fileToList: Max capacity reached at " << insertionCount << " insertion(s)." << endl;
@@ -95,20 +95,33 @@ void sort(ArrayList<T> &list)
 		return;
 	}
 
-	T tmp = list.getEntry(1);
-	int position = 0; // replace index
+	T smallest = list.getEntry(1);
+	int position = 1;
 
 	// begin sort
 	for(int i = 1; i < list.getLength()+1; i++)
 	{
+		smallest = list.getEntry(i);
+
 		for(int j = i+1; j < list.getLength()+1; j++)
 		{
-			if(list.getEntry(j) < tmp)
+			if(list.getEntry(j) < smallest)
 			{
-				tmp = list.getEntry(j);
-				position = j;
+				smallest = list.getEntry(j);
+				position = j; // position smallest was found at
 			}
 		}
-		list.replace(position, tmp);
+
+		//swap front with smallest if smallest was found
+		if(position > 0)
+		{
+			list.replace(position, list.getEntry(i)); // replace smallest with front item
+			list.replace(i, smallest); // replace front item with smallest
+		}
+		else
+			return;
+
+		// reset position
+		position = -1;
 	}
 }
