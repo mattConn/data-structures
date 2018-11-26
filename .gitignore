@@ -36,5 +36,7 @@
 *.swp
 *.stash
 
+*/Makefile
 # Project Binaries
 linked-list/linked-list
+queue/queue
