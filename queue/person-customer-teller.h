@@ -15,7 +15,12 @@ public:
 // customer subclass
 class Customer : public Person
 {
+    int arrivalTime;
 public:
+    Customer() : arrivalTime(-1)
+    {};
+    void setArrivalTime(const int &time){ arrivalTime = time;};
+    int getArrivalTime(){ return arrivalTime; };
     void incTime(){ timer++; };
 };
 
@@ -29,5 +34,7 @@ public:
     {}
 
     void decTime(){ timer--; };
+
+    bool isBusy(){ return busy; };
 
 };
