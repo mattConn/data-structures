@@ -13,5 +13,6 @@ SOURCES += \
 HEADERS += \
 	ArrayQueue.h \
 	PrecondViolatedExcep.h \
-	QueueInterface.h
+	QueueInterface.h \
+    person-customer-teller.h
 
