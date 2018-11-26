@@ -18,10 +18,13 @@ For each value of the clock (say 1-100) the following actions are processed (loo
 3. If a customer is at the teller’s window, the time remaining for that customer to be serviced is decremented.
 
 Average wait time = total wait time for all customers/total number of customers
+
 Input: The number of servers (start with 1), the distribution of arrival times, the expected service time and the length of the simulation.
 Include objects that represent customers (they keep track of how long they are waiting), tellers( they can be busy or free), the line ( a queue of customers) and timers(tellers decrement their timer and customers on line increment their timers).
 Use a random number generator to determine the probability of a customer arriving during each loop iteration: (0.0 – no arrival to 1.0 – definitely arrives). For example, if a customer arrives on an average of every 5 minutes, the probability is 1 chance in 5 (or .2).
+
 #include <cstdlib>
 //rand() returns a value between 0 – RAND_MAX
+
 We want a range of 0.0 – 1.0: float(rand( ))/float (RAND_MAX)
 If the random number is between 0 and the arrival probability (.2 in our example) then a customer arrives, otherwise no customer arrives.
