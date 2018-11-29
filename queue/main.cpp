@@ -9,22 +9,42 @@ float getRand();
 
 int main()
 {
+    // seed random number generator
+    srand(time(NULL));
+
     // program time
     int programTimer = 0;
 
     Teller teller;
     ArrayQueue<Customer> line;
+
+    // TO BE INPUT
+    //============
+
+    // no. of tellers
+    // dist. of arrival
+    // expected service time
+    // length of sim.
+
     int arrivalDist = 5;
     int expectedServiceTime = 6;
+    float arrivalProb = 1/float(arrivalDist);
+    int simLength = 100;
 
-    while(programTimer < 100)
+
+    while(programTimer < simLength)
     {
-        Customer *c = new Customer;
+        // If the random number is between 0 and the arrival probability
+        // then a customer arrives, otherwise no customer arrives.
+        if(getRand() <= arrivalProb)
+        {
+            Customer *c = new Customer;
 
-        // set arrival time
-        c->setArrivalTime(programTimer);
+            // set arrival time
+            c->setArrivalTime(programTimer);
 
-        line.enqueue(*c);
+            line.enqueue(*c);
+        }
 
         programTimer++;
     }
