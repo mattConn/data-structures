@@ -36,5 +36,6 @@ public:
     void decTime(){ timer--; };
 
     bool isBusy(){ return busy; };
+    bool isBusy(const bool &status){ busy = status; };
 
 };
