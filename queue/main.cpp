@@ -29,29 +29,33 @@ int main()
         // program time
         int programTimer = 0;
 
+        // line of customers
         ArrayQueue<Customer> line;
+
+        // teller to serve customers
+        Teller teller;
+
+        cout << "<Ctrl-c to quit.>\n" << endl;
 
         // Data prompts
         // ============
-        cout << "<Ctrl-c to quit.>\n" << endl;
-
-        cout << "Enter distribution of arrival times: " << endl;
+        cout << "Enter distribution of arrival times: \n> ";
         cin >> arrivalDist;
 
-        cout << "Enter expected service time: " << endl;
+        cout << "Enter expected service time: \n> ";
         cin >> expectedServiceTime;
 
-        cout << "Enter length of simulation: " << endl;
+        cout << "Enter length of simulation: \n> ";
         cin >> simLength;
         //=================
         // End data prompts
 
         system(CLEAR_SCREEN);
 
+        // calculate probability of customer arrival
         float arrivalProb = 1/float(arrivalDist);
 
-        Teller teller;
-
+        // variables updated throughout simulation
         int totalWaitTime = 0;
         int numCustomers = 0;
 
@@ -70,35 +74,42 @@ int main()
                 // set arrival time
                 c->setArrivalTime(programTimer);
 
+                // enqueue customer in line
                 line.enqueue(*c);
             }
 
 
             // check if teller is free
+            // by checking their service time
             if(teller.getTime() == 0)
             {
-                if(!line.isEmpty())
+                if(!line.isEmpty()) // make sure line has customers in it
                 {
                     // add user's wait time to total wait time
                     totalWaitTime += ( programTimer - line.peekFront().getArrivalTime());
 
                     line.dequeue();
 
+                    // teller is now servicing customer
                     teller.setTime(expectedServiceTime);
                 }
             }
             else
-                teller.decTime();
+                teller.decTime(); // teller is busy, decrement their time
 
 
-            programTimer++;
+            programTimer++; // increment simulation clock
+
         } // end sim. while loop
 
         // Display data and results
         //=========================
+
+        // display user inputs
         printf("Dist. = %d, service time = %d, sim. length = %d\n", arrivalDist, expectedServiceTime, simLength);
         cout << "~~~~~~" << endl;
 
+        // display simulation results
         cout << "Num. of customers: " << numCustomers << endl;
         cout << "Total wait time: " << totalWaitTime << endl;
         cout << "Avg. wait time: " << float(totalWaitTime)/float(numCustomers == 0 ? 1 : numCustomers)  << endl;
