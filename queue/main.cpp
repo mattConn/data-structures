@@ -18,49 +18,44 @@ int main()
     // seed random number generator
     srand(time(NULL));
 
-    // program time
-    int programTimer = 0;
-
-    Teller teller;
-    ArrayQueue<Customer> line;
-
-    // TO BE INPUT
-    //============
-
-    // no. of tellers
-    // dist. of arrival
-    // expected service time
-    // length of sim.
-
+    // program loop - get user input
     while(true)
     {
-        int numTellers = 0;
+        // variables receiving user input
         int arrivalDist = 0;
         int expectedServiceTime = 0;
         int simLength = 0;
 
+        // program time
+        int programTimer = 0;
+
+        ArrayQueue<Customer> line;
+
         // Data prompts
         // ============
         cout << "<Ctrl-c to quit.>\n" << endl;
-        cout << "Enter no. of tellers: " << endl;
-        cin >> numTellers;
+
         cout << "Enter distribution of arrival times: " << endl;
         cin >> arrivalDist;
+
         cout << "Enter expected service time: " << endl;
         cin >> expectedServiceTime;
+
         cout << "Enter length of simulation: " << endl;
         cin >> simLength;
+        //=================
+        // End data prompts
 
         system(CLEAR_SCREEN);
 
         float arrivalProb = 1/float(arrivalDist);
 
-        Teller tellers[numTellers];
+        Teller teller;
 
-        int serviceTime = 0;
         int totalWaitTime = 0;
         int numCustomers = 0;
 
+        // simulation while loop
         while(programTimer < simLength)
         {
             // If the random number is between 0 and the arrival probability
@@ -78,35 +73,36 @@ int main()
                 line.enqueue(*c);
             }
 
-            if(serviceTime > 0)
-                serviceTime--;
-            else
-                teller.isBusy(false);
 
             // check if teller is free
-            for(int i = 0; i < numTellers; i++)
+            if(teller.getTime() == 0)
             {
-                if(!tellers[i].isBusy())
+                if(!line.isEmpty())
                 {
+                    // add user's wait time to total wait time
+                    totalWaitTime += ( programTimer - line.peekFront().getArrivalTime());
+
                     line.dequeue();
 
-                    tellers[i].isBusy(true);
-                    serviceTime = expectedServiceTime;
-
-                    totalWaitTime += serviceTime;
+                    teller.setTime(expectedServiceTime);
                 }
             }
+            else
+                teller.decTime();
+
 
             programTimer++;
         } // end sim. while loop
 
         // Display data and results
-        printf("Tellers = %d, Dist. = %d, service time = %d, sim. length = %d\n",numTellers, arrivalDist, expectedServiceTime, simLength);
+        //=========================
+        printf("Dist. = %d, service time = %d, sim. length = %d\n", arrivalDist, expectedServiceTime, simLength);
         cout << "~~~~~~" << endl;
 
         cout << "Num. of customers: " << numCustomers << endl;
         cout << "Total wait time: " << totalWaitTime << endl;
         cout << "Avg. wait time: " << float(totalWaitTime)/float(numCustomers == 0 ? 1 : numCustomers)  << endl;
+
         cout << "~~~~~~" << endl;
         cout << endl;
 
@@ -114,7 +110,7 @@ int main()
 
 
     return 0;
-}
+} // end main
 
 float getRand()
 {
