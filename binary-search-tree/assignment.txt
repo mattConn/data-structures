@@ -9,3 +9,6 @@ Write a C++ program to validate computer user-ids and passwords.  A list of vali
 Note: you will need to overload >>, <<, ==, and < operators in the UserInfo class in order to accomplish this task.
 
 BST.h class is on Blackboard.  
+
+** Note
+BST.h can be modified

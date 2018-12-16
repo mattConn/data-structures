@@ -9,5 +9,6 @@ SOURCES += \
 
 
 HEADERS += \
-	BST.h
+	BST.h \
+    userinfo.h
 
