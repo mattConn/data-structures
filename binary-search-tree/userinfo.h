@@ -18,8 +18,8 @@ public:
     string getName();
     string getPassword();
 
-    // overloaded greater than operator
-    bool operator >(const userInfo);
+    bool operator >(const userInfo &user) const;
+    bool operator <(const userInfo &user) const;
 };
 
 // constructors
@@ -44,7 +44,9 @@ inline string userInfo::getPassword(){
 };
 
 // overloaded operators
-bool userInfo::operator >(const userInfo user)
+//=====================
+
+bool userInfo::operator >(const userInfo &user) const
 {
     // names are equal
     if(user.name == name)
@@ -66,6 +68,14 @@ bool userInfo::operator >(const userInfo user)
     }
 
     return true;
+}
+
+bool userInfo::operator <(const userInfo &user) const
+{
+    if(user > *this)
+        return true;
+
+    return false;
 }
 
 #define USERINFO_H
