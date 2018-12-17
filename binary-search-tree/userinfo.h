@@ -22,7 +22,7 @@ public:
     //=====================
     bool operator >(const userInfo &user) const;
     bool operator <(const userInfo &user) const;
-    friend ostream operator <<(ostream &out, const userInfo &user);
+    friend ostream & operator <<(ostream &out, const userInfo &user);
 };
 
 // constructors
@@ -88,10 +88,10 @@ bool userInfo::operator <(const userInfo &user) const
     return false;
 }
 
-ostream operator <<(ostream &out, const userInfo &user)
+ostream & operator <<(ostream &out, const userInfo &user)
 {
-    // TEMP
-    cout << "FOOBARBAZ";
+    out << user.name << ", " << user.password << endl;
+    return out;
 }
 
 #define USERINFO_H
