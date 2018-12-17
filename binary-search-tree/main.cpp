@@ -37,12 +37,32 @@ int main()
         users.insert(*user);
     }
 
-
     //=========================
     // end file reading routine
 
-    userInfo foo("foo","bar");
-    cout << foo << endl;
+    cout << "TEST" << endl;
+    // user input while loop
+    bool looping = true;
+    while(looping)
+    {
+        cout << "\n<Ctrl-c to quit.>\n" << endl;
 
-   return 0;
+        cout << "Username: ";
+        cin >> userName;
+
+        cout << "Password: ";
+        cin >> userPassword;
+
+        userInfo *user = new userInfo(userName, userPassword);
+
+        if(users.search(*user)) // if correct credentials
+            cout << "\tUsername and password are correct." << endl;
+        else
+            cout << "\tUsername or password was incorrect." << endl;
+
+    }
+
+    //    users.inorder(cout);
+
+    return 0;
 }

@@ -22,6 +22,7 @@ public:
     //=====================
     bool operator >(const userInfo &user) const;
     bool operator <(const userInfo &user) const;
+    bool operator ==(const userInfo &user) const;
     friend ostream & operator <<(ostream &out, const userInfo &user);
 };
 
@@ -83,6 +84,14 @@ bool userInfo::operator >(const userInfo &user) const
 bool userInfo::operator <(const userInfo &user) const
 {
     if(user > *this)
+        return true;
+
+    return false;
+}
+
+bool userInfo::operator ==(const userInfo &user) const
+{
+    if(name == user.name && password == user.password)
         return true;
 
     return false;

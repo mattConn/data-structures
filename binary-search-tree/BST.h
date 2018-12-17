@@ -152,6 +152,11 @@ inline bool BST<DataType>::empty() const
 { return myRoot == 0; }
 
 //--- Definition of search()
+
+// MODIFICATION
+//=============
+// addition of == comparison
+
 template <typename DataType>
 bool BST<DataType>::search(const DataType & item) const
 {
@@ -163,8 +168,13 @@ bool BST<DataType>::search(const DataType & item) const
         locptr = locptr->left;
       else if (locptr->data < item)  // descend right
         locptr = locptr->right;
-      else                           // item found
-        found = true;
+      else // MODIFICATION
+      {
+        if(locptr->data == item)
+            found = true;
+        else
+            return found;
+      }
    }
    return found;
 }
