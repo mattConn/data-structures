@@ -1,0 +1,37 @@
+Reading users list...
+Done reading users list.
+
+<Type QUIT to quit and see all users.>
+
+Username: matt32
+Password: bestpassword10
+	Username and password are correct.
+
+<Type QUIT to quit and see all users.>
+
+Username: joe
+Password: logmein2
+	Username or password was incorrect.
+
+<Type QUIT to quit and see all users.>
+
+Username: QUIT 
+
+Usernames and passwords:
+
+ABaNowal, cocacola_-240
+  Cooluser32, password123
+  Tswarlab, nBPCAjCH
+  baz, 789
+  bobby, asdasd
+  eddie, goodPW
+  foo, 123
+  jimmy, pwn133t
+  l33tUser_92, eGAtrMAxo
+  matt32, bestpassword10
+  minifiedS, 1982_free
+  minitab-13, yugioh_199_R
+  onomotopeia, harCHyTEve19R
+  untzuntz2007, badgers199
+  zoombini, 19391
+

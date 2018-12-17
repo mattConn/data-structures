@@ -30,12 +30,15 @@ int main()
     // temp strings to receive fstream
     string userName, userPassword;
 
+    cout << "Reading users list..." << endl;
     while(inFile >> userName >> userPassword)
     {
         userInfo *user = new userInfo(userName, userPassword);
 
         users.insert(*user);
     }
+    cout << "Done reading users list." << endl;
+    cout << endl;
 
     //=========================
     // end file reading routine
@@ -45,6 +48,7 @@ int main()
     while(true)
     {
         cout << "<Type QUIT to quit and see all users.>" << endl;
+        cout << endl;
 
         // get input, check for quit command
         cout << "Username: ";
@@ -66,6 +70,7 @@ int main()
             cout << "\tUsername and password are correct." << endl;
         else
             cout << "\tUsername or password was incorrect." << endl;
+        cout << endl;
 
     }
 
