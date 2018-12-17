@@ -11,6 +11,8 @@ using namespace std;
 
 int main()
 {
+    /*
+
     // user tree
     BST<userInfo> users;
 
@@ -37,9 +39,19 @@ int main()
     }
 
 
-
     //=========================
     // end file reading routine
+    */
+
+    userInfo foo("Foo","Bar");
+    userInfo bar("Goe","Baz");
+
+    cout << (foo < bar) << endl;
+
+
+//    string name = "FG";
+//    cout << (name[0] > name[1]) << endl;
+//    int(name[0]) > int(user.name[1])
 
    return 0;
 }

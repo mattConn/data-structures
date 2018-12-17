@@ -18,8 +18,11 @@ public:
     string getName();
     string getPassword();
 
+    // overloaded operators
+    //=====================
     bool operator >(const userInfo &user) const;
     bool operator <(const userInfo &user) const;
+    friend ostream operator <<(ostream &out, const userInfo &user);
 };
 
 // constructors
@@ -61,13 +64,20 @@ bool userInfo::operator >(const userInfo &user) const
 
         // compare character by character
         for(int i = 0; i < length; i++)
-            if(tolower(name[i]) > tolower(user.name[i]))
-                return true;
+        {
+            //            if(name[i] != user.name[i] && name[i] > user.name[i])
+            if(name[i] != user.name[i])
+            {
+                if(name[i] > user.name[i])
+                    return true;
+                else
+                    return false;
+            }
+        }
 
-        return false;
     }
 
-    return true;
+    return false;
 }
 
 bool userInfo::operator <(const userInfo &user) const
@@ -76,6 +86,12 @@ bool userInfo::operator <(const userInfo &user) const
         return true;
 
     return false;
+}
+
+ostream operator <<(ostream &out, const userInfo &user)
+{
+    // TEMP
+    cout << "FOOBARBAZ";
 }
 
 #define USERINFO_H
