@@ -40,19 +40,26 @@ int main()
     //=========================
     // end file reading routine
 
-    cout << "TEST" << endl;
     // user input while loop
-    bool looping = true;
-    while(looping)
+    //======================
+    while(true)
     {
-        cout << "\n<Ctrl-c to quit.>\n" << endl;
+        cout << "<Type QUIT to quit and see all users.>" << endl;
 
+        // get input, check for quit command
         cout << "Username: ";
         cin >> userName;
+
+        if(userName == "QUIT")
+            break;
 
         cout << "Password: ";
         cin >> userPassword;
 
+        if(userPassword == "QUIT")
+            break;
+
+        // search for user
         userInfo *user = new userInfo(userName, userPassword);
 
         if(users.search(*user)) // if correct credentials
@@ -62,7 +69,9 @@ int main()
 
     }
 
-    //    users.inorder(cout);
+    // display all users
+    cout << "\nUsernames and passwords:\n" << endl;
+    users.inorder(cout);
 
     return 0;
 }
